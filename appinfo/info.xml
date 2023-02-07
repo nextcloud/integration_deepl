@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<info>
+	<id>integration_deepl</id>
+	<name>Deepl integration</name>
+	<summary>Deepl integration providing translations through deepl.com</summary>
+	<description><![CDATA[Youtube integration providing an translations through deepl.com with Nextcloud 26]]></description>
+	<version>0.1.0</version>
+	<licence>agpl</licence>
+	<author>Julius Härtl</author>
+	<namespace>IntegrationDeepl</namespace>
+	<category>integration</category>
+	<website>https://github.com/juliushaertl/integration_deepl</website>
+	<bugs>https://github.com/juliushaertl/integration_deepl/issues</bugs>
+	<dependencies>
+		<nextcloud min-version="26" max-version="26"/>
+	</dependencies>
+</info>
