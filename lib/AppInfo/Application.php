@@ -27,7 +27,6 @@ use OCP\AppFramework\App;
 use OCP\AppFramework\Bootstrap\IBootContext;
 use OCP\AppFramework\Bootstrap\IBootstrap;
 use OCP\AppFramework\Bootstrap\IRegistrationContext;
-use OCP\Translation\ITranslationManager;
 
 class Application extends App implements IBootstrap {
 	public const APP_ID = 'integration_deepl';
@@ -37,11 +36,10 @@ class Application extends App implements IBootstrap {
 
 	public function register(IRegistrationContext $context): void {
 		require_once __DIR__ . '/../../vendor/autoload.php';
+
+		$context->registerTranslationProvider(DeeplProvider::class);
 	}
 
 	public function boot(IBootContext $context): void {
-		$context->injectFn(function (ITranslationManager $manager, DeeplProvider $deeplProvider) {
-			$manager->registerProvider($deeplProvider);
-		});
 	}
 }
