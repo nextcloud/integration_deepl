@@ -134,7 +134,7 @@ class DeeplProvider implements ITranslationProvider, IDetectLanguageProvider {
 	public function detectLanguage(string $text): ?string {
 		try {
 			$cacheKey = md5($text);
-			$result = $this->localCache[$cacheKey] ?? $this->translator->translateText($text, null, 'en');
+			$result = $this->localCache[$cacheKey] ?? $this->translator->translateText($text, null, 'en-US');
 			$this->localCache[$cacheKey] = $result;
 			return $result->detectedSourceLang;
 		} catch (DeepLException $e) {
@@ -157,8 +157,7 @@ class DeeplProvider implements ITranslationProvider, IDetectLanguageProvider {
 			$this->localCache[$cacheKey] = $result;
 			return $result->text;
 		} catch (DeepLException $e) {
-			$this->logger->error("Failed translate from {$fromLanguage} to {$toLanguage}", ['exception' => $e]);
-			throw new \Exception("Failed translate from {$fromLanguage} to {$toLanguage}");
+			throw new RuntimeException("Failed translate from {$fromLanguage} to {$toLanguage}", 0, $e);
 		}
 	}
 }
