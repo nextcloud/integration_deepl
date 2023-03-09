@@ -69,7 +69,7 @@ class DeeplProvider implements ITranslationProvider, IDetectLanguageProvider {
 		$cache = $this->cacheFactory->createDistributed('integration_deepl');
 		if ($cached = $cache->get('languages')) {
 			return array_map(function ($entry) {
-				return LanguageTuple::fromArray($entry);
+				return $entry instanceof LanguageTuple ? $entry : LanguageTuple::fromArray($entry);
 			}, $cached);
 		}
 
