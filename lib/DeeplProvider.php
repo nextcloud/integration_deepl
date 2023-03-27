@@ -148,7 +148,9 @@ class DeeplProvider implements ITranslationProvider, IDetectLanguageProvider {
 			$cacheKey = ($fromLanguage ?? '') . '/' . $toLanguage . '/' . md5($text);
 
 			// If formality is passed in the language code, use it but otherwise prefer formal
-			[$toLanguage, $formal] = explode('_', $toLanguage, 2);
+			$splitLanguage = explode('_', $toLanguage, 2);
+			$toLanguage = $splitLanguage[0];
+			$formal = $splitLanguage[1] ?? 'prefer_more';
 			$formality = $formal === 'less' ? 'prefer_less' : 'prefer_more';
 
 			$result = $this->localCache[$cacheKey] ?? $this->translator->translateText($text, $fromLanguage, $toLanguage, [
