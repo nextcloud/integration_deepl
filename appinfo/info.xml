@@ -3,8 +3,8 @@
 	<id>integration_deepl</id>
 	<name>Deepl integration</name>
 	<summary>Deepl integration providing translations through deepl.com</summary>
-	<description><![CDATA[Deepl integration providing an translations through deepl.com with Nextcloud 26]]></description>
-	<version>1.0.0</version>
+	<description><![CDATA[Deepl integration providing an translations through deepl.com with Nextcloud]]></description>
+	<version>1.1.0</version>
 	<licence>agpl</licence>
 	<author>Julius Härtl</author>
 	<namespace>IntegrationDeepl</namespace>
@@ -12,6 +12,6 @@
 	<website>https://github.com/juliushaertl/integration_deepl</website>
 	<bugs>https://github.com/juliushaertl/integration_deepl/issues</bugs>
 	<dependencies>
-		<nextcloud min-version="26" max-version="26"/>
+		<nextcloud min-version="26" max-version="27"/>
 	</dependencies>
 </info>
