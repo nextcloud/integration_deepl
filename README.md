@@ -14,6 +14,15 @@ Learn more about the Nextcloud Ethical AI Rating [in our blog](https://nextcloud
 
 ## Configuring
 
+In the "Connected Accounts" section of the admin settings, the admin has the option to set the API key of the DeepL translation API.
+
+Alternatively, you can run this command to set it:
 ```
 occ config:app:set integration_deepl apikey --value="apikey"
 ```
+
+## 🖼️ Screenshots
+
+![DeepL translation in Talk app](img/screenshot1.png)
+
+![Translate from German to English](img/screenshot2.png)

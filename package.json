@@ -13,7 +13,7 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/nextcloud/integration_deepl"
+		"url": "https://github.com/juliushaertl/integration_deepl"
 	},
 	"keywords": [
 		"deepl",
@@ -23,9 +23,9 @@
 	"author": "Julius Härtl",
 	"license": "AGPL-3.0",
 	"bugs": {
-		"url": "https://github.com/nextcloud/integration_deepl/issues"
+		"url": "https://github.com/juliushaertl/integration_deepl/issues"
 	},
-	"homepage": "https://github.com/nextcloud/integration_deepl",
+	"homepage": "https://github.com/juliushaertl/integration_deepl",
 	"browserslist": [
 		"extends @nextcloud/browserslist-config"
 	],
@@ -36,7 +36,8 @@
 		"@nextcloud/l10n": "^2.0.1",
 		"@nextcloud/router": "^2.0.0",
 		"@nextcloud/vue": "^7.0.0",
-		"vue": "^2.7.13"
+		"vue": "^2.7.13",
+		"vue-material-design-icons": "^5.2.0"
 	},
 	"engines": {
 		"node": "^20.0.0",
