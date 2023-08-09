@@ -37,7 +37,7 @@ import { showSuccess, showError } from '@nextcloud/dialogs'
 import DeeplIcon from './icons/DeeplIcon.vue'
 
 let timeout
-const delay = (fn, ms = 2000) => {
+const debounce = (fn, ms = 2000) => {
 	clearTimeout(timeout)
 	timeout = setTimeout(fn, ms)
 }
@@ -59,33 +59,28 @@ export default {
 		}
 	},
 
-	watch: {
-	},
-
-	mounted() {
-	},
-
 	methods: {
 		onInput() {
-			delay(() => {
-				this.saveOptions({
+			debounce(async () => {
+				await this.saveOptions({
 					apikey: this.state.apikey,
 				})
 			})
 		},
-		saveOptions(values) {
+		async saveOptions(values) {
 			const req = { values }
 			const url = generateUrl('/apps/integration_deepl/admin-config')
 
-			axios.put(url, req).then(() => {
+			try {
+				await axios.put(url, req)
 				showSuccess(t('integration_deepl', 'DeepL admin options saved'))
-			}).catch((error) => {
+			} catch (error) {
 				showError(
 					t('integration_deepl', 'Failed to save DeepL admin options')
 					+ ': ' + (error.response?.request?.responseText ?? '')
 				)
 				console.error(error)
-			})
+			}
 		},
 	},
 }
