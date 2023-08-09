@@ -14,16 +14,22 @@ Negative:
 * the training data is not freely available, limiting the ability of external parties to check and correct for bias or optimise the model’s performance and CO2 usage.
 
 Learn more about the Nextcloud Ethical AI Rating [in our blog](https://nextcloud.com/blog/nextcloud-ethical-ai-rating/).
-		
+
 ]]></description>
 	<version>1.1.0</version>
 	<licence>agpl</licence>
 	<author>Julius Härtl</author>
 	<namespace>IntegrationDeepl</namespace>
 	<category>integration</category>
-	<website>https://github.com/juliushaertl/integration_deepl</website>
-	<bugs>https://github.com/juliushaertl/integration_deepl/issues</bugs>
+	<website>https://github.com/nextcloud/integration_deepl</website>
+	<bugs>https://github.com/nextcloud/integration_deepl/issues</bugs>
+	<screenshot>https://raw.githubusercontent.com/nextcloud/integration_deepl/main/img/screenshot1.png</screenshot>
+	<screenshot>https://raw.githubusercontent.com/nextcloud/integration_deepl/main/img/screenshot2.png</screenshot>
 	<dependencies>
-		<nextcloud min-version="26" max-version="27"/>
+		<nextcloud min-version="26" max-version="28"/>
 	</dependencies>
+	<settings>
+		<admin>OCA\IntegrationDeepl\Settings\Admin</admin>
+		<admin-section>OCA\IntegrationDeepl\Settings\AdminSection</admin-section>
+	</settings>
 </info>
