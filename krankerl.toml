@@ -1,4 +1,5 @@
 [package]
 before_cmds = [
-	'composer install --no-dev'
+	'composer install --no-dev',
+	'npm ci && npm run build'
 ]
