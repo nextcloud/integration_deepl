@@ -57,7 +57,7 @@ class DeeplProvider implements ITranslationProvider, IDetectLanguageProvider {
 				[]
 			);
 		} catch (DeepLException $e) {
-			throw new RuntimeException('Failed to initialize deepl translator class', 0, $e);
+			throw new RuntimeException('Failed to initialize deepl translator class, ensure you have entered the required api key in the admin settings', 0, $e);
 		}
 	}
 
