@@ -11,12 +11,11 @@
 
 namespace OCA\IntegrationDeepl\Controller;
 
+use OCA\IntegrationDeepl\AppInfo\Application;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\IConfig;
 use OCP\IRequest;
-
-use OCA\IntegrationDeepl\AppInfo\Application;
 
 class ConfigController extends Controller {
 

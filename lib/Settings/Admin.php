@@ -1,12 +1,12 @@
 <?php
+
 namespace OCA\IntegrationDeepl\Settings;
 
+use OCA\IntegrationDeepl\AppInfo\Application;
 use OCP\AppFramework\Http\TemplateResponse;
 use OCP\AppFramework\Services\IInitialState;
 use OCP\IConfig;
 use OCP\Settings\ISettings;
-
-use OCA\IntegrationDeepl\AppInfo\Application;
 
 class Admin implements ISettings {
 
