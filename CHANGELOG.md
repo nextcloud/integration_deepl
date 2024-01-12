@@ -1,3 +1,16 @@
+## 1.1.2
+
+## Fixed
+
+- @skjnldsv Update workflows from templates
+- @kyteinsky Composer update and workflow additions
+
+## Added
+
+- @juliushaertl Add Krankerl config to build frontend
+- @juliushaertl Add transifex config
+- @juliushaertl Add appstore-build-publish.yml
+
 ## 1.1.1
 
 ## Added
