@@ -77,7 +77,7 @@ export default {
 			} catch (error) {
 				showError(
 					t('integration_deepl', 'Failed to save DeepL admin options')
-					+ ': ' + (error.response?.request?.responseText ?? '')
+					+ ': ' + (error.response?.request?.responseText ?? ''),
 				)
 				console.error(error)
 			}
