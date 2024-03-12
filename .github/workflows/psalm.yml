@@ -56,6 +56,12 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+      - name: Hacky fix for NC 26
+        if: ${{ matrix.ocp-version == '^26' }}
+        run: |
+          sed -i "s;nextcloud\/ocp\": \"dev-master\";nextcloud\/ocp\": \"^26\";" composer.json
+          rm composer.lock
+
       - name: Install dependencies
         run: composer i
 
