@@ -1,3 +1,13 @@
+## 1.1.3 - 2024-03-13
+
+## Changed
+
+- @kyteinsky update composer and node deps (mainly nc/vue8)
+
+## Added
+
+- @kyteinsky Add Nextcloud 29 compatibility
+
 ## 1.1.2
 
 ## Fixed
