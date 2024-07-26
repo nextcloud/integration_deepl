@@ -1,3 +1,10 @@
+## 1.2.0 – 2024-07-26
+
+### Changed
+- @kyteinsky update composer deps
+- @kyteinsky update gh workflows
+- @kyteinsky bump max NC version to 30
+
 ## 1.1.3 - 2024-03-13
 
 ## Changed
