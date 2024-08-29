@@ -24,21 +24,19 @@ declare(strict_types=1);
  */
 
 
-namespace OCA\IntegrationDeepl;
+namespace OCA\IntegrationDeepl\Service;
 
 use DeepL\DeepLException;
 use DeepL\Translator;
 use OCA\IntegrationDeepl\AppInfo\Application;
+use OCA\IntegrationDeepl\Type\LanguageTuple;
 use OCP\ICacheFactory;
 use OCP\IConfig;
 use OCP\L10N\IFactory;
-use OCP\Translation\IDetectLanguageProvider;
-use OCP\Translation\ITranslationProvider;
-use OCP\Translation\LanguageTuple;
 use Psr\Log\LoggerInterface;
 use RuntimeException;
 
-class DeeplProvider implements ITranslationProvider, IDetectLanguageProvider {
+class DeeplService {
 	private Translator $translator;
 	public const IDENTIFIER_FORMAL = 'more';
 	public const IDENTIFIER_INFORMAL = 'less';
@@ -65,6 +63,9 @@ class DeeplProvider implements ITranslationProvider, IDetectLanguageProvider {
 		return 'Deepl.com';
 	}
 
+	/**
+	 * @return array<LanguageTuple>
+	 */
 	public function getAvailableLanguages(): array {
 		$cache = $this->cacheFactory->createDistributed('integration_deepl');
 		if ($cached = $cache->get('languages')) {
