@@ -1,3 +1,9 @@
+## 1.3.0 – 2024-09-10
+
+### Added
+
+- @kyteinsky Add task processing provider
+
 ## 1.2.0 – 2024-07-26
 
 ### Changed
