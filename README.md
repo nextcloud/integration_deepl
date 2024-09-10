@@ -2,6 +2,12 @@
 
 This app integrates with the translation API of Nextcloud server to offer translation services through deepl. Currently this is available in text.
 
+To run translations and any other Task Processing tasks synchronously, run the following command in a background process (10 is the interval in seconds when the process should relaunch to use the latest php changes):
+
+```sh
+set -e; while true; do occ background-job:worker -v -t 10 "OC\TaskProcessing\SynchronousBackgroundJob"; done
+```
+
 ## Ethical AI Rating
 ### Rating: 🔴
 
