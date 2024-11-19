@@ -30,6 +30,7 @@ use DeepL\DeepLException;
 use DeepL\Translator;
 use OCA\IntegrationDeepl\AppInfo\Application;
 use OCA\IntegrationDeepl\Type\LanguageTuple;
+use OCA\IntegrationDeepl\Service\UtilsService;
 use OCP\ICacheFactory;
 use OCP\IConfig;
 use OCP\L10N\IFactory;

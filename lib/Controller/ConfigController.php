@@ -15,6 +15,7 @@ use OCA\IntegrationDeepl\AppInfo\Application;
 use OCA\IntegrationDeepl\Service\UtilsService;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\DataResponse;
+use OCP\AppFramework\Http\Attribute\PasswordConfirmationRequired;
 use OCP\IConfig;
 use OCP\IRequest;
 
