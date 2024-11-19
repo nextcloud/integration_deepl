@@ -24,7 +24,7 @@ class ConfigController extends Controller {
 		string   $appName,
 		IRequest $request,
 		private IConfig  $config,
-		UtilsService $utilsService,
+		private UtilsService $utilsService,
 	) {
 		parent::__construct($appName, $request);
 	}

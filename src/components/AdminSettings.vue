@@ -62,7 +62,7 @@ export default {
 	methods: {
 		onInput() {
 			debounce(async () => {
-				if (!'dummyKey'.includes(this.state.apikey)) {
+				if (this.state.apikey !== 'dummyKey') {
 					await this.saveOptions({
 						apikey: this.state.apikey,
 					})
