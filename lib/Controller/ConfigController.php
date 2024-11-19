@@ -33,6 +33,7 @@ class ConfigController extends Controller {
 	 * @param array $values key/value pairs to store in app config
 	 * @return DataResponse
 	 */
+	#[PasswordConfirmationRequired]
 	public function setAdminConfig(array $values): DataResponse {
 		foreach ($values as $key => $value) {
 			$this->config->setAppValue(Application::APP_ID, $key, $value);
