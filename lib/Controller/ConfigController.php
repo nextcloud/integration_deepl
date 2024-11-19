@@ -12,6 +12,7 @@
 namespace OCA\IntegrationDeepl\Controller;
 
 use OCA\IntegrationDeepl\AppInfo\Application;
+use OCA\IntegrationDeepl\Service\UtilsService;
 use OCP\AppFramework\Controller;
 use OCP\AppFramework\Http\DataResponse;
 use OCP\IConfig;
@@ -23,6 +24,7 @@ class ConfigController extends Controller {
 		string   $appName,
 		IRequest $request,
 		private IConfig  $config,
+		UtilsService $utilsService,
 	) {
 		parent::__construct($appName, $request);
 	}
@@ -36,7 +38,11 @@ class ConfigController extends Controller {
 	#[PasswordConfirmationRequired]
 	public function setAdminConfig(array $values): DataResponse {
 		foreach ($values as $key => $value) {
-			$this->config->setAppValue(Application::APP_ID, $key, $value);
+			if ($key === 'apikey' && $value !== '') {
+				$this->utilsService->setEncryptedAppValue($key, $value);
+			} else {
+				$this->config->setAppValue(Application::APP_ID, $key, $value);
+			}
 		}
 		return new DataResponse(1);
 	}
