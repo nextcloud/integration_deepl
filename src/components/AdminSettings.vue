@@ -62,9 +62,11 @@ export default {
 	methods: {
 		onInput() {
 			debounce(async () => {
-				await this.saveOptions({
-					apikey: this.state.apikey,
-				})
+				if (!'dummyKey'.includes(this.state.apikey)) {
+					await this.saveOptions({
+						apikey: this.state.apikey,
+					})
+				}
 			})
 		},
 		async saveOptions(values) {

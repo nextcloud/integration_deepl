@@ -23,7 +23,8 @@ class Admin implements ISettings {
 		$apiKey = $this->config->getAppValue(Application::APP_ID, 'apikey');
 
 		$adminConfig = [
-			'apikey' => $apiKey,
+			// don't expose the apikey to the frontend
+			'apikey' => $apiKey === '' ? '' : 'dummyKey',
 		];
 		$this->initialStateService->provideInitialState('admin-config', $adminConfig);
 		return new TemplateResponse(Application::APP_ID, 'adminSettings');
