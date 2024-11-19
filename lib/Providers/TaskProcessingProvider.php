@@ -12,6 +12,7 @@ namespace OCA\IntegrationDeepl\Providers;
 
 use OCA\IntegrationDeepl\AppInfo\Application;
 use OCA\IntegrationDeepl\Service\DeeplService;
+use OCA\IntegrationDeepl\Service\UtilsService;
 use OCP\ICacheFactory;
 use OCP\IConfig;
 use OCP\IL10N;
@@ -31,8 +32,9 @@ class TaskProcessingProvider extends DeeplService implements ISynchronousProvide
 		private LoggerInterface $logger,
 		private IFactory $l10nFactory,
 		private IL10N $l,
+		private UtilsService $utilsService,
 	) {
-		parent::__construct($config, $cacheFactory, $logger, $l10nFactory);
+		parent::__construct($config, $cacheFactory, $logger, $l10nFactory, $utilsService);
 	}
 
 	public function getId(): string {
