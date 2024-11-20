@@ -47,11 +47,12 @@ class DeeplService {
 		private IConfig $config,
 		private ICacheFactory $cacheFactory,
 		private LoggerInterface $logger,
-		private IFactory $l10nFactory
+		private IFactory $l10nFactory,
+		private UtilsService $utilsService,
 	) {
 		try {
 			$this->translator = new Translator(
-				$this->config->getAppValue(Application::APP_ID, 'apikey'),
+				$this->utilsService->getEncryptedAppValue('apikey'),
 				[]
 			);
 		} catch (DeepLException $e) {

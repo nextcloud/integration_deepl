@@ -34,6 +34,7 @@ import { loadState } from '@nextcloud/initial-state'
 import { generateUrl } from '@nextcloud/router'
 import axios from '@nextcloud/axios'
 import { showSuccess, showError } from '@nextcloud/dialogs'
+import { confirmPassword } from '@nextcloud/password-confirmation'
 import DeeplIcon from './icons/DeeplIcon.vue'
 
 let timeout
@@ -62,12 +63,15 @@ export default {
 	methods: {
 		onInput() {
 			debounce(async () => {
-				await this.saveOptions({
-					apikey: this.state.apikey,
-				})
+				if (this.state.apikey !== 'dummyKey') {
+					await this.saveOptions({
+						apikey: this.state.apikey,
+					})
+				}
 			})
 		},
 		async saveOptions(values) {
+			await confirmPassword()
 			const req = { values }
 			const url = generateUrl('/apps/integration_deepl/admin-config')
 
