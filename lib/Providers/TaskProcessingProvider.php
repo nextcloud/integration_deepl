@@ -61,10 +61,18 @@ class TaskProcessingProvider extends DeeplService implements ISynchronousProvide
 		$availableLanguages = $this->getAvailableLanguages();
 		$originLanguages = [];
 		$targetLanguages = [];
+		$originLanguageList = [];
+		$targetLanguageList = [];
 
 		foreach ($availableLanguages as $language) {
-			$originLanguages[] = new ShapeEnumValue($language->fromLabel, $language->from);
-			$targetLanguages[] = new ShapeEnumValue($language->toLabel, $language->to);
+			if (!in_array($language->fromLabel, $originLanguageList)) {
+				$originLanguages[] = new ShapeEnumValue($language->fromLabel, $language->from);
+				$originLanguageList[] = $language->fromLabel;
+			}
+			if (!in_array($language->toLabel, $targetLanguageList)) {
+				$targetLanguages[] = new ShapeEnumValue($language->toLabel, $language->to);
+				$targetLanguageList[] = $language->toLabel;
+			}
 		}
 
 		$detectLanguageEnumValue = new ShapeEnumValue($this->l->t('Detect language'), self::DETECT_LANGUAGE);
