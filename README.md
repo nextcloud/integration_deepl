@@ -1,6 +1,8 @@
 # Deepl.com integration for Nextcloud
 
-This app integrates with the translation API of Nextcloud server to offer translation services through deepl. Currently this is available in text.
+This app integrates with Nextcloud Assistant to offer translation services We recommend to install Assistant additionally and activate Deepl as translation provider in the Artifical Intelligence admion settings.
+
+This app also integrates with the translation API of Nextcloud server to offer translation services without Assistant. Currently this is available in text and Talk.
 
 To run translations and any other Task Processing tasks synchronously, run the following command in a background process (10 is the interval in seconds when the process should relaunch to use the latest php changes):
 
@@ -27,7 +29,16 @@ Alternatively, you can run this command to set it:
 occ config:app:set integration_deepl apikey --value="apikey"
 ```
 
+In the "Artificial Intelligence" section of the admin settings, the admin can choose Deepl as the default provider for translations in Assistant in the "Task:Translate" option.
+
+![Set Deepl for Assistant translation](img/Screenshot_Settings_1.png)
+
+Additionally, the admin can do the same for translations in Talk and text in the "Machine translations" option.
+
+![Set Deepl as translate provider](img/Screenshot_Settings_2.png)
+
 ## 🖼️ Screenshots
+![DeepL translation in Assistant app](img/screenshot_assistant.png)
 
 ![DeepL translation in Talk app](img/screenshot1.png)
 
