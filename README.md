@@ -1,6 +1,6 @@
 # Deepl.com integration for Nextcloud
 
-This app integrates with Nextcloud Assistant to offer translation services We recommend to install Assistant additionally and activate Deepl as translation provider in the Artifical Intelligence admion settings.
+This app integrates with [Nextcloud Assistant](https://apps.nextcloud.com/apps/assistant) to offer translation services We recommend to install Assistant additionally and activate Deepl as translation provider in the Artifical Intelligence admion settings.
 
 This app also integrates with the translation API of Nextcloud server to offer translation services without Assistant. Currently this is available in text and Talk.
 
