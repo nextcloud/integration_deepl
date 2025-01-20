@@ -1,3 +1,12 @@
+## 1.3.1 - 2024-01-20
+
+### Changed
+- @janepie update node modules
+- @janepie security improvements (encrypt API key, require password confirmation, hide key from frontend)
+- @janepie fixed duplicate language entrys in input enum values
+- @janepie updated readme, appinfo and screenshots
+
+
 ## 1.3.0 – 2024-09-10
 
 ### Added
