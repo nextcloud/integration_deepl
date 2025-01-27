@@ -1,4 +1,10 @@
+<!--
+  - SPDX-FileCopyrightText: 2023 Nextcloud GmbH and Nextcloud contributors
+  - SPDX-License-Identifier: AGPL-3.0-or-later
+-->
 # Deepl.com integration for Nextcloud
+
+[![REUSE status](https://api.reuse.software/badge/github.com/nextcloud/integration_deepl)](https://api.reuse.software/info/github.com/nextcloud/integration_deepl)
 
 This app integrates with [Nextcloud Assistant](https://apps.nextcloud.com/apps/assistant) to offer translation services We recommend to install Assistant additionally and activate Deepl as translation provider in the Artifical Intelligence admin settings.
 
