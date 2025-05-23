@@ -17,7 +17,7 @@ class LanguageTuple implements JsonSerializable {
 		public string $from,
 		public string $fromLabel,
 		public string $to,
-		public string $toLabel
+		public string $toLabel,
 	) {
 	}
 
