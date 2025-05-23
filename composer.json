@@ -1,6 +1,6 @@
 {
 	"require-dev": {
-		"nextcloud/ocp": "dev-master"
+		"nextcloud/ocp": "dev-stable30"
 	},
 	"config": {
 		"optimize-autoloader": true,
