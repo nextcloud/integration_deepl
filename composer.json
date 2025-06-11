@@ -11,13 +11,13 @@
 			"bamarni/composer-bin-plugin": true
 		},
 		"platform": {
-			"php": "8.0.2"
+			"php": "8.1"
 		}
 	},
 	"scripts": {
 		"lint": "find . -name \\*.php -not -path './vendor*' -print0 | xargs -0 -n1 php -l",
-		"cs:check": "php-cs-fixer fix --dry-run --diff",
-		"cs:fix": "php-cs-fixer fix",
+		"cs:check": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix --dry-run --diff",
+		"cs:fix": "PHP_CS_FIXER_IGNORE_ENV=1 php-cs-fixer fix",
 		"psalm": "psalm",
 		"psalm:ci": "psalm --threads=1",
 		"psalm:clear": "psalm --clear-cache && psalm --clear-global-cache",
@@ -43,7 +43,7 @@
 		}
 	},
 	"require": {
-		"php": "^8.0 || ^8.1 || ^8.2 || ^8.3",
+		"php": "^8.1 || ^8.2 || ^8.3 || ^8.4",
 		"bamarni/composer-bin-plugin": "^1.8",
 		"deeplcom/deepl-php": "^1.6",
 		"nyholm/psr7": "^1.8",

@@ -18,9 +18,9 @@ use OCP\IRequest;
 class ConfigController extends Controller {
 
 	public function __construct(
-		string   $appName,
+		string $appName,
 		IRequest $request,
-		private IConfig  $config,
+		private IConfig $config,
 		private UtilsService $utilsService,
 	) {
 		parent::__construct($appName, $request);
