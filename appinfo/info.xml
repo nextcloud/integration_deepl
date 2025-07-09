@@ -35,6 +35,7 @@ Learn more about the Nextcloud Ethical AI Rating [in our blog](https://nextcloud
 	<author>Julius Härtl</author>
 	<namespace>IntegrationDeepl</namespace>
 	<category>integration</category>
+	<category>ai</category>
 	<website>https://github.com/nextcloud/integration_deepl</website>
 	<bugs>https://github.com/nextcloud/integration_deepl/issues</bugs>
 	<screenshot>https://raw.githubusercontent.com/nextcloud/integration_deepl/main/img/screenshot_assistant.png</screenshot>
