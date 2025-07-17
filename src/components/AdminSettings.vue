@@ -16,7 +16,7 @@
 		<div id="deepl-content">
 			<div class="line">
 				<label for="deepl-apikey">
-					<KeyIcon :size="20" class="icon" />
+					<KeyOutlineIcon :size="20" class="icon" />
 					{{ t('integration_deepl', 'API Key') }}
 				</label>
 				<input id="deepl-apikey"
@@ -32,7 +32,7 @@
 </template>
 
 <script>
-import KeyIcon from 'vue-material-design-icons/Key.vue'
+import KeyOutlineIcon from 'vue-material-design-icons/KeyOutline.vue'
 
 import { loadState } from '@nextcloud/initial-state'
 import { generateUrl } from '@nextcloud/router'
@@ -51,7 +51,7 @@ export default {
 	name: 'AdminSettings',
 
 	components: {
-		KeyIcon,
+		KeyOutlineIcon,
 		DeeplIcon,
 	},
 
