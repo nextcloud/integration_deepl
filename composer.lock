@@ -65,16 +65,16 @@
         },
         {
             "name": "deeplcom/deepl-php",
-            "version": "v1.12.0",
+            "version": "v1.13.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DeepLcom/deepl-php.git",
-                "reference": "b9a7e0385d27a99b7756ebf95e953785b90e8161"
+                "reference": "a7b1b8f398cf5978ef0a04caf2eec38f8566aecf"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DeepLcom/deepl-php/zipball/b9a7e0385d27a99b7756ebf95e953785b90e8161",
-                "reference": "b9a7e0385d27a99b7756ebf95e953785b90e8161",
+                "url": "https://api.github.com/repos/DeepLcom/deepl-php/zipball/a7b1b8f398cf5978ef0a04caf2eec38f8566aecf",
+                "reference": "a7b1b8f398cf5978ef0a04caf2eec38f8566aecf",
                 "shasum": ""
             },
             "require": {
@@ -122,9 +122,9 @@
             ],
             "support": {
                 "issues": "https://github.com/DeepLcom/deepl-php/issues",
-                "source": "https://github.com/DeepLcom/deepl-php/tree/v1.12.0"
+                "source": "https://github.com/DeepLcom/deepl-php/tree/v1.13.0"
             },
-            "time": "2025-04-25T20:00:25+00:00"
+            "time": "2025-11-04T10:09:28+00:00"
         },
         {
             "name": "nyholm/psr7",
