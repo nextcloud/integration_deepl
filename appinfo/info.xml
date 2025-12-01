@@ -42,7 +42,7 @@ Learn more about the Nextcloud Ethical AI Rating [in our blog](https://nextcloud
 	<screenshot>https://raw.githubusercontent.com/nextcloud/integration_deepl/main/img/screenshot1.png</screenshot>
 	<screenshot>https://raw.githubusercontent.com/nextcloud/integration_deepl/main/img/screenshot2.png</screenshot>
 	<dependencies>
-		<nextcloud min-version="30" max-version="32"/>
+		<nextcloud min-version="30" max-version="33"/>
 	</dependencies>
 	<settings>
 		<admin>OCA\IntegrationDeepl\Settings\Admin</admin>
