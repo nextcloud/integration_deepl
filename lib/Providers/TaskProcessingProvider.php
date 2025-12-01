@@ -12,9 +12,8 @@ namespace OCA\IntegrationDeepl\Providers;
 
 use OCA\IntegrationDeepl\AppInfo\Application;
 use OCA\IntegrationDeepl\Service\DeeplService;
-use OCA\IntegrationDeepl\Service\UtilsService;
+use OCP\AppFramework\Services\IAppConfig;
 use OCP\ICacheFactory;
-use OCP\IConfig;
 use OCP\IL10N;
 use OCP\L10N\IFactory;
 use OCP\TaskProcessing\ISynchronousProvider;
@@ -27,14 +26,13 @@ class TaskProcessingProvider extends DeeplService implements ISynchronousProvide
 	private const DETECT_LANGUAGE = 'detect_language';
 
 	public function __construct(
-		private IConfig $config,
+		private IAppConfig $appConfig,
 		private ICacheFactory $cacheFactory,
 		private LoggerInterface $logger,
 		private IFactory $l10nFactory,
 		private IL10N $l,
-		private UtilsService $utilsService,
 	) {
-		parent::__construct($config, $cacheFactory, $logger, $l10nFactory, $utilsService);
+		parent::__construct($appConfig, $cacheFactory, $logger, $l10nFactory);
 	}
 
 	public function getId(): string {

@@ -8,18 +8,16 @@
 namespace OCA\IntegrationDeepl\Settings;
 
 use OCA\IntegrationDeepl\AppInfo\Application;
-use OCA\IntegrationDeepl\Service\UtilsService;
 use OCP\AppFramework\Http\TemplateResponse;
+use OCP\AppFramework\Services\IAppConfig;
 use OCP\AppFramework\Services\IInitialState;
-use OCP\IConfig;
 use OCP\Settings\ISettings;
 
 class Admin implements ISettings {
 
 	public function __construct(
-		private IConfig $config,
+		private IAppConfig $appConfig,
 		private IInitialState $initialStateService,
-		private UtilsService $utilsService,
 	) {
 	}
 
@@ -27,7 +25,7 @@ class Admin implements ISettings {
 	 * @return TemplateResponse
 	 */
 	public function getForm(): TemplateResponse {
-		$apiKey = $this->utilsService->getEncryptedAppValue('apikey');
+		$apiKey = $this->appConfig->getAppValueString('apikey', lazy: true);
 
 		$adminConfig = [
 			// don't expose the apikey to the frontend
