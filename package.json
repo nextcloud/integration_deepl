@@ -1,6 +1,6 @@
 {
 	"name": "integration_deepl",
-	"version": "1.1.0",
+	"version": "2.1.0",
 	"description": "Deepl integration",
 	"scripts": {
 		"build": "NODE_ENV=production webpack --progress --config webpack.js",
