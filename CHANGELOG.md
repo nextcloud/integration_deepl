@@ -3,6 +3,15 @@
   - SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
+## 2.1.0 - 2025-12-01
+
+### Changed
+- @janepie added support for NC33
+- @janepie updated npm and composer packages
+- @janepie switch from config and encrypting api key ourselves to using IAppConfig
+- @janepie lazy loading of API key
+
+
 ## 2.0.0 - 2025-07-17
 
 ### Changed
