@@ -14,8 +14,8 @@ use DeepL\DeepLException;
 use DeepL\Translator;
 use OCA\IntegrationDeepl\AppInfo\Application;
 use OCA\IntegrationDeepl\Type\LanguageTuple;
+use OCP\AppFramework\Services\IAppConfig;
 use OCP\ICacheFactory;
-use OCP\IConfig;
 use OCP\L10N\IFactory;
 use Psr\Log\LoggerInterface;
 use RuntimeException;
@@ -28,15 +28,14 @@ class DeeplService {
 	private array $localCache = [];
 
 	public function __construct(
-		private IConfig $config,
+		private IAppConfig $appConfig,
 		private ICacheFactory $cacheFactory,
 		private LoggerInterface $logger,
 		private IFactory $l10nFactory,
-		private UtilsService $utilsService,
 	) {
 		try {
 			$this->translator = new Translator(
-				$this->utilsService->getEncryptedAppValue('apikey'),
+				$this->appConfig->getAppValueString('apikey', lazy: true),
 				[]
 			);
 		} catch (DeepLException $e) {
