@@ -10,7 +10,13 @@
 		</h2>
 		<div id="deepl-content">
 			<NcNoteCard type="info">
-				{{ t('integration_deepl', 'Set an API key to start using the DeepL integration') }}
+				{{ t('integration_deepl', 'Set an API key to start using the DeepL integration.') }}
+				<br>
+				{{ t('integration_deepl', 'More information on API keys on the Deepl documentation.') }}
+				<br>
+				<a href="https://developers.deepl.com/docs/getting-started/managing-api-keys" target="_blank" class="external">
+					https://developers.deepl.com/docs/getting-started/managing-api-keys
+				</a>
 			</NcNoteCard>
 			<NcTextField
 				v-model="state.apikey"
