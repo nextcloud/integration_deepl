@@ -41,7 +41,12 @@ import { generateUrl } from '@nextcloud/router'
 import axios from '@nextcloud/axios'
 import { showSuccess, showError } from '@nextcloud/dialogs'
 import { confirmPassword } from '@nextcloud/password-confirmation'
-import debounce from 'debounce'
+
+let timeout
+const debounce = (fn, ms = 2000) => {
+	clearTimeout(timeout)
+	timeout = setTimeout(fn, ms)
+}
 
 export default {
 	name: 'AdminSettings',
@@ -63,13 +68,15 @@ export default {
 	},
 
 	methods: {
-		onInput: debounce(async function() {
-			if (this.state.apikey !== 'dummyKey') {
-				await this.saveOptions({
-					apikey: this.state.apikey,
-				})
-			}
-		}, 2000),
+		onInput() {
+			debounce(async () => {
+				if (this.state.apikey !== 'dummyKey') {
+					await this.saveOptions({
+						apikey: this.state.apikey,
+					})
+				}
+			})
+		},
 		async saveOptions(values) {
 			await confirmPassword()
 			const req = { values }
