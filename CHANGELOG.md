@@ -3,6 +3,16 @@
   - SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
+## 2.2.0 - 2026-04-14
+### Added
+- @janepie Support for NC34
+
+### Changed
+- @julien-nc Migrated to vue3 and nc/vue 9.x.x
+- @julien-nc Modernized settings, use more nc components
+- @julien-nc Use proper debounce
+- @janepie updated dependencies
+
 ## 2.1.0 - 2025-12-01
 
 ### Changed
