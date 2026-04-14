@@ -65,16 +65,16 @@
         },
         {
             "name": "deeplcom/deepl-php",
-            "version": "v1.16.0",
+            "version": "v1.18.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/DeepLcom/deepl-php.git",
-                "reference": "4dd0a38676b9725dd80b86b71548b91d2c0f5a69"
+                "reference": "ca53d6e6907a71c47729ab160f0bbcbc059bed02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/DeepLcom/deepl-php/zipball/4dd0a38676b9725dd80b86b71548b91d2c0f5a69",
-                "reference": "4dd0a38676b9725dd80b86b71548b91d2c0f5a69",
+                "url": "https://api.github.com/repos/DeepLcom/deepl-php/zipball/ca53d6e6907a71c47729ab160f0bbcbc059bed02",
+                "reference": "ca53d6e6907a71c47729ab160f0bbcbc059bed02",
                 "shasum": ""
             },
             "require": {
@@ -122,9 +122,9 @@
             ],
             "support": {
                 "issues": "https://github.com/DeepLcom/deepl-php/issues",
-                "source": "https://github.com/DeepLcom/deepl-php/tree/v1.16.0"
+                "source": "https://github.com/DeepLcom/deepl-php/tree/v1.18.0"
             },
-            "time": "2025-12-10T21:01:51+00:00"
+            "time": "2026-04-09T17:49:42+00:00"
         },
         {
             "name": "nyholm/psr7",
@@ -671,16 +671,16 @@
         },
         {
             "name": "symfony/http-client",
-            "version": "v6.4.28",
+            "version": "v6.4.36",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/http-client.git",
-                "reference": "c9e69c185c4a845f9d46958cdb0dc7aa847f3981"
+                "reference": "1baea3a592ec5ee1f58de6548a034268d4946db6"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/http-client/zipball/c9e69c185c4a845f9d46958cdb0dc7aa847f3981",
-                "reference": "c9e69c185c4a845f9d46958cdb0dc7aa847f3981",
+                "url": "https://api.github.com/repos/symfony/http-client/zipball/1baea3a592ec5ee1f58de6548a034268d4946db6",
+                "reference": "1baea3a592ec5ee1f58de6548a034268d4946db6",
                 "shasum": ""
             },
             "require": {
@@ -745,7 +745,7 @@
                 "http"
             ],
             "support": {
-                "source": "https://github.com/symfony/http-client/tree/v6.4.28"
+                "source": "https://github.com/symfony/http-client/tree/v6.4.36"
             },
             "funding": [
                 {
@@ -765,7 +765,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-11-05T17:39:22+00:00"
+            "time": "2026-03-23T20:48:09+00:00"
         },
         {
             "name": "symfony/http-client-contracts",
@@ -847,16 +847,16 @@
         },
         {
             "name": "symfony/polyfill-php83",
-            "version": "v1.33.0",
+            "version": "v1.35.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/polyfill-php83.git",
-                "reference": "17f6f9a6b1735c0f163024d959f700cfbc5155e5"
+                "reference": "3600c2cb22399e25bb226e4a135ce91eeb2a6149"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/symfony/polyfill-php83/zipball/17f6f9a6b1735c0f163024d959f700cfbc5155e5",
-                "reference": "17f6f9a6b1735c0f163024d959f700cfbc5155e5",
+                "url": "https://api.github.com/repos/symfony/polyfill-php83/zipball/3600c2cb22399e25bb226e4a135ce91eeb2a6149",
+                "reference": "3600c2cb22399e25bb226e4a135ce91eeb2a6149",
                 "shasum": ""
             },
             "require": {
@@ -903,7 +903,7 @@
                 "shim"
             ],
             "support": {
-                "source": "https://github.com/symfony/polyfill-php83/tree/v1.33.0"
+                "source": "https://github.com/symfony/polyfill-php83/tree/v1.35.0"
             },
             "funding": [
                 {
@@ -923,7 +923,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2025-07-08T02:45:35+00:00"
+            "time": "2026-04-10T17:25:58+00:00"
         },
         {
             "name": "symfony/service-contracts",
@@ -1020,16 +1020,16 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/nextcloud-deps/ocp.git",
-                "reference": "869be299538564cdcd8b88682d028297212ec8e8"
+                "reference": "be9f48b40ed1e07b3c0f7a51d3800e875d45f04b"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/nextcloud-deps/ocp/zipball/869be299538564cdcd8b88682d028297212ec8e8",
-                "reference": "869be299538564cdcd8b88682d028297212ec8e8",
+                "url": "https://api.github.com/repos/nextcloud-deps/ocp/zipball/be9f48b40ed1e07b3c0f7a51d3800e875d45f04b",
+                "reference": "be9f48b40ed1e07b3c0f7a51d3800e875d45f04b",
                 "shasum": ""
             },
             "require": {
-                "php": "~8.1 || ~8.2 || ~8.3 || ~8.4",
+                "php": "~8.1 || ~8.2 || ~8.3 || ~8.4 || ~8.5",
                 "psr/clock": "^1.0",
                 "psr/container": "^2.0.2",
                 "psr/event-dispatcher": "^1.0",
@@ -1039,7 +1039,7 @@
             "type": "library",
             "extra": {
                 "branch-alias": {
-                    "dev-master": "33.0.0-dev"
+                    "dev-master": "34.0.0-dev"
                 }
             },
             "notification-url": "https://packagist.org/downloads/",
@@ -1061,7 +1061,7 @@
                 "issues": "https://github.com/nextcloud-deps/ocp/issues",
                 "source": "https://github.com/nextcloud-deps/ocp/tree/master"
             },
-            "time": "2025-12-02T00:53:42+00:00"
+            "time": "2026-04-14T01:25:24+00:00"
         },
         {
             "name": "psr/clock",
@@ -1176,5 +1176,5 @@
     "platform-overrides": {
         "php": "8.1"
     },
-    "plugin-api-version": "2.6.0"
+    "plugin-api-version": "2.9.0"
 }
