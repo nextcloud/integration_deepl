@@ -3,6 +3,13 @@
   - SPDX-License-Identifier: AGPL-3.0-or-later
 -->
 
+## 2.3.0 - 2026-07-29
+### Added
+- @janepie Support for NC35
+
+### Changed
+- @janepie updated dependencies
+
 ## 2.2.0 - 2026-04-14
 ### Added
 - @janepie Support for NC34
