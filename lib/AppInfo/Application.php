@@ -25,10 +25,7 @@ class Application extends App implements IBootstrap {
 
 		$context->registerTranslationProvider(TranslationProvider::class);
 
-		$config = $this->getContainer()->query(IConfig::class);
-		if (version_compare($config->getSystemValueString('version', '0.0.0'), '30.0', '>=')) {
-			$context->registerTaskProcessingProvider(\OCA\IntegrationDeepl\Providers\TaskProcessingProvider::class);
-		}
+		$context->registerTaskProcessingProvider(\OCA\IntegrationDeepl\Providers\TaskProcessingProvider::class);
 	}
 
 	public function boot(IBootContext $context): void {
