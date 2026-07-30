@@ -1,6 +1,6 @@
 {
 	"name": "integration_deepl",
-	"version": "2.2.0",
+	"version": "2.3.0",
 	"description": "Deepl integration",
 	"scripts": {
 		"build": "NODE_ENV=production webpack --progress --config webpack.js",
@@ -50,6 +50,13 @@
 		"@nextcloud/stylelint-config": "^3.1.0",
 		"@nextcloud/webpack-vue-config": "^7.0.2",
 		"eslint-webpack-plugin": "^5.0.2",
-		"stylelint-webpack-plugin": "^5.0.1"
+		"stylelint-webpack-plugin": "^5.0.1",
+		"terser-webpack-plugin": "^5.6.1"
+	},
+	"allowScripts": {
+		"@nextcloud/webpack-vue-config": true,
+		"@parcel/watcher": true,
+		"core-js": true,
+		"unrs-resolver": true
 	}
 }
